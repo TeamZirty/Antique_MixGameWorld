@@ -5,10 +5,6 @@ public class PaperPlaneController : MonoBehaviour
     public Rigidbody2D rb;
     public float windForce = 5f;
 
-    
-    
-
-    private bool isGameOver = false;
 
     void Update()
     {
@@ -33,8 +29,7 @@ public class PaperPlaneController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            isGameOver = true;
-            Debug.Log("Game Over!");
+            GameManager.Instance.GameOver();
         }
     }
 }

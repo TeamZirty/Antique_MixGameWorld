@@ -1,15 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Text distanceText;
+    public TMP_Text distanceText;
+    public TMP_Text currentScoreText;
+    public TMP_Text highScoreText;
     public GameObject gameOverPanel;
     public Transform plane;
 
     private float startX;
+    private float currentDistance;
+    private float highScore;
     private bool isGameOver = false;
 
     void Awake()
@@ -17,24 +23,50 @@ public class GameManager : MonoBehaviour
         Instance = this;
         startX = plane.position.x;
         gameOverPanel.SetActive(false);
+
+        // 최고 기록 불러오기 (PlayerPrefs에서)
+        highScore = PlayerPrefs.GetFloat("HighScore", 0);
+        UpdateHighScoreText();
     }
 
     void Update()
     {
         if (isGameOver) return;
 
-        float distance = plane.position.x - startX;
-        distanceText.text = $"거리: {distance:F1} m";
+        currentDistance = plane.position.x - startX;
+        distanceText.text = $"거리: {currentDistance:F1} m";
     }
 
     public void GameOver()
     {
+        Debug.Log("게임 오버");
         isGameOver = true;
         gameOverPanel.SetActive(true);
+
+        UpdateCurrentScoreText();
+
+        if (currentDistance > highScore)
+        {
+            highScore = currentDistance;
+            PlayerPrefs.SetFloat("HighScore", highScore);
+            PlayerPrefs.Save();
+        }
+
+        UpdateHighScoreText();
     }
 
     public void Restart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
+    }
+
+    private void UpdateCurrentScoreText()
+    {
+        currentScoreText.text = $"현재 기록: {currentDistance:F1} m";
+    }
+
+    private void UpdateHighScoreText()
+    {
+        highScoreText.text = $"최고 기록: {highScore:F1} m";
     }
 }
