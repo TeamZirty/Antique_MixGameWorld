@@ -69,4 +69,34 @@ public class GameManager : MonoBehaviour
     {
         highScoreText.text = $"최고 기록: {highScore:F1} m";
     }
+
+    // ▶ 추가 기능들 -------------------------
+
+    public void StartGame()
+    {
+        Debug.Log("게임 시작!");
+        SceneManager.LoadScene("InfinityModeScene");  // 게임 씬 이름을 정확히 적으세요
+    }
+
+    public void HowToPlay()
+    {
+        Debug.Log("게임 방법 화면으로 이동!");
+        SceneManager.LoadScene("TutorialScene");  // 게임 방법 씬 이름을 정확히 적으세요
+    }
+
+    public void GoToTitle()
+    {
+        Debug.Log("타이틀 화면으로 이동!");
+        SceneManager.LoadScene("TitleScene");  // 타이틀 씬 이름을 정확히 적으세요
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("게임 종료!");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;  // 에디터에서 실행 중일 때
+#else
+        Application.Quit();  // 빌드된 게임에서
+#endif
+    }
 }

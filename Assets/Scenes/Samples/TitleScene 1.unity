@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAC8C\uC784 \uC885\uB8CC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
-  m_sharedMaterial: {fileID: -9200553858058633214, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
+  m_sharedMaterial: {fileID: -3065695673468522556, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -337,19 +337,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 264278290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140257177}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &264278290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 93}
+  m_AnchoredPosition: {x: 0, y: 101}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941256423
@@ -447,8 +435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC774\uCE74\uB8E8\uC2A4\uC758 \uAFC8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
-  m_sharedMaterial: {fileID: -9200553858058633214, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
+  m_sharedMaterial: {fileID: -3065695673468522556, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -614,7 +602,6 @@ GameObject:
   - component: {fileID: 1037689891}
   - component: {fileID: 1037689890}
   - component: {fileID: 1037689889}
-  - component: {fileID: 1037689892}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -696,50 +683,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1037689892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037689888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1138592368
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,8 +751,8 @@ Canvas:
   m_GameObject: {fileID: 1138592368}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 1037689890}
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -845,55 +788,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1140257176
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140257178}
-  - component: {fileID: 1140257177}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1140257177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140257176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d52918ed1d9b224288a6655bea81362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceText: {fileID: 0}
-  currentScoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
-  gameOverPanel: {fileID: 0}
-  plane: {fileID: 0}
---- !u!4 &1140257178
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140257176}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.478588, y: 5.88855, z: 0.015128404}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1417788441
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,8 +847,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAC8C\uC784 \uC2DC\uC791"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
-  m_sharedMaterial: {fileID: -9200553858058633214, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
+  m_sharedMaterial: {fileID: -3065695673468522556, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1188,19 +1082,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1677768065}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140257177}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1677768065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,19 +1203,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1799325126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1140257177}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: HowToPlay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1799325126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,8 +1301,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAC8C\uC784 \uBC29\uBC95\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
-  m_sharedMaterial: {fileID: -9200553858058633214, guid: 62effc13a9ea199459ee82aa8bd2c66a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
+  m_sharedMaterial: {fileID: -3065695673468522556, guid: f9b3dcf6a75449d49bc76e8c47dbe145, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1515,4 +1385,3 @@ SceneRoots:
   - {fileID: 1037689891}
   - {fileID: 1138592372}
   - {fileID: 949651749}
-  - {fileID: 1140257178}

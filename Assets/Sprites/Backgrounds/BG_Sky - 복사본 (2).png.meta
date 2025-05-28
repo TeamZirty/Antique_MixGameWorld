@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94610c87c1cc98e4db2db386d3111fe6
+guid: 84aeadbe49bdc5d4ba303caf50129043
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 620337419786148252
-    second: "BG_Sky - \uBCF5\uC0AC\uBCF8 (3)_0"
+      213: -1671544404145287433
+    second: "BG_Sky - \uBCF5\uC0AC\uBCF8 (2)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "BG_Sky - \uBCF5\uC0AC\uBCF8 (3)_0"
+      name: "BG_Sky - \uBCF5\uC0AC\uBCF8 (2)_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c995c3bb891eb9800800000000000000
-      internalID: 620337419786148252
+      spriteID: 7fec0ac783b7dc8e0800000000000000
+      internalID: -1671544404145287433
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "BG_Sky - \uBCF5\uC0AC\uBCF8 (3)_0": 620337419786148252
+      "BG_Sky - \uBCF5\uC0AC\uBCF8 (2)_0": -1671544404145287433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
