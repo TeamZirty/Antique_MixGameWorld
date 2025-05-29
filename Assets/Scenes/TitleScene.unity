@@ -868,7 +868,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 07fcf565b1a0bf94c8d770f300cd911d, type: 3}
   m_Resource: {fileID: 8300000, guid: 07fcf565b1a0bf94c8d770f300cd911d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9575977cd611c4a82d62c480cd01c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmSource: {fileID: 0}
+  bgmSource: {fileID: 1057579564}
   sfxSource: {fileID: 1057579563}
   clickClip: {fileID: 8300000, guid: eb9f8f8b302bebc499ad5c574e852e17, type: 3}
   buttonClip: {fileID: 8300000, guid: 6ec28c7479e7b3b41b7c4fd02264e91a, type: 3}

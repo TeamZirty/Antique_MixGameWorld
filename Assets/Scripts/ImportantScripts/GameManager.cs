@@ -79,9 +79,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SoundManager.Instance.PlayBGM();
         Debug.Log("게임 시작!");
         SceneManager.LoadScene("InfinityModeScene");  // 게임 씬 이름을 정확히 적으세요
+        SoundManager.Instance.PlayBGM();
         SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
@@ -94,10 +94,9 @@ public class GameManager : MonoBehaviour
 
     public void GoToTitle()
     {
-
-        SoundManager.Instance.StopBGM();
         Debug.Log("타이틀 화면으로 이동!");
         SceneManager.LoadScene("TitleScene");  // 타이틀 씬 이름을 정확히 적으세요
+        SoundManager.Instance.StopBGM();
         SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
