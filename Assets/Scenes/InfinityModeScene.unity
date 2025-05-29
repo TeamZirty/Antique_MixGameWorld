@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundPrefab: {fileID: 8930616125804315147, guid: 8c480a8cc6b0782498457fbe8cb8daa7, type: 3}
   player: {fileID: 1994092920}
-  groundWidth: 5
+  groundWidth: 10
   groundBuffer: 10
 --- !u!1 &1589963058
 GameObject:
