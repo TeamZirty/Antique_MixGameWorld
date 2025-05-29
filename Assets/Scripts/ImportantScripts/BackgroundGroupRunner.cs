@@ -4,12 +4,12 @@ using System.Collections.Generic;
 public class BackgroundGroupRunner : MonoBehaviour
 {
     public Transform player;
-    public GameObject[] prefabs;     // 랜덤으로 뽑을 프리팹들
-    public float width = 64f;        // 블록 폭
+    public GameObject[] prefabs;
+    public float width = 64f;
     public int poolSizePerPrefab = 3;
     public int initialBlocks = 3;
     public float parallaxFactor = 0.5f;
-    public float yOffset = 0f;       // Y축 높이 (예: 산 아래, 구름 위)
+    public float yOffset = 0f;
 
     private List<GameObject>[] pools;
     private GameObject[] activeBlocks;
@@ -51,10 +51,18 @@ public class BackgroundGroupRunner : MonoBehaviour
     {
         transform.position = new Vector3(player.position.x * parallaxFactor, transform.position.y, transform.position.z);
 
+        // 앞으로 이동
         var rightBlock = activeBlocks[rightIndex];
         if (player.position.x > rightBlock.transform.position.x - width)
         {
             ScrollRight();
+        }
+
+        // 뒤로 이동
+        var leftBlock = activeBlocks[leftIndex];
+        if (player.position.x < leftBlock.transform.position.x + width)
+        {
+            ScrollLeft();
         }
     }
 
@@ -74,6 +82,24 @@ public class BackgroundGroupRunner : MonoBehaviour
 
         rightIndex = leftIndex;
         leftIndex = (leftIndex + 1) % activeBlocks.Length;
+    }
+
+    void ScrollLeft()
+    {
+        ReturnToPool(activeBlocks[rightIndex]);
+
+        GameObject newBlock = GetFromPool();
+        newBlock.transform.position = new Vector3(
+            activeBlocks[leftIndex].transform.position.x - width,
+            yOffset,
+            0
+        );
+        newBlock.SetActive(true);
+
+        activeBlocks[rightIndex] = newBlock;
+
+        leftIndex = rightIndex;
+        rightIndex = (rightIndex - 1 + activeBlocks.Length) % activeBlocks.Length;
     }
 
     GameObject GetFromPool()

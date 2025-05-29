@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (isGameOver) return;  // 이미 게임오버 상태면 추가 실행 막기
+
         Debug.Log("게임 오버");
         isGameOver = true;
         gameOverPanel.SetActive(true);
@@ -53,11 +55,14 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateHighScoreText();
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.gameOverClip, 0.5f);
     }
+
 
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("InfinityModeScene"); 
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
     private void UpdateCurrentScoreText()
@@ -74,29 +79,37 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        SoundManager.Instance.PlayBGM();
         Debug.Log("게임 시작!");
         SceneManager.LoadScene("InfinityModeScene");  // 게임 씬 이름을 정확히 적으세요
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
     public void HowToPlay()
     {
         Debug.Log("게임 방법 화면으로 이동!");
         SceneManager.LoadScene("TutorialScene");  // 게임 방법 씬 이름을 정확히 적으세요
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
     public void GoToTitle()
     {
+
+        SoundManager.Instance.StopBGM();
         Debug.Log("타이틀 화면으로 이동!");
         SceneManager.LoadScene("TitleScene");  // 타이틀 씬 이름을 정확히 적으세요
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
     }
 
     public void QuitGame()
-    {
-        Debug.Log("게임 종료!");
+    {   Debug.Log("게임 종료!");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;  // 에디터에서 실행 중일 때
 #else
         Application.Quit();  // 빌드된 게임에서
 #endif
+
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.buttonClip,1f);
+
     }
 }

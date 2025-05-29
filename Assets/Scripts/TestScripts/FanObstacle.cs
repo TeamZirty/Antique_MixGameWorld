@@ -17,12 +17,12 @@ public class FanObstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            SoundManager.Instance.PlayFanSoundAtPosition(transform.position);
+
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.AddForce(windDirection.normalized * windForce * Time.deltaTime, ForceMode2D.Force);
-
-                // rb.AddForce(windDirection.normalized * windForce * Time.deltaTime, ForceMode2D.Force);
             }
         }
     }

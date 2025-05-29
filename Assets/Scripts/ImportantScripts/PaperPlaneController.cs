@@ -10,6 +10,7 @@ public class PaperPlaneController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.clickClip,0.8f);
             Vector3 clickWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickWorldPos.z = 0;
 
@@ -31,5 +32,13 @@ public class PaperPlaneController : MonoBehaviour
         {
             GameManager.Instance.GameOver();
         }
+
+        if (collision.collider.CompareTag("Leaf"))
+        {
+            Debug.Log("ÇÃ·¹ÀÌ¾î°¡ ³«¿±¿¡ Ãæµ¹!");
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.leafHitClip, 0.6f);
+        }
     }
+
+
 }
