@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateHighScoreText();
-        SoundManager.Instance.PlaySFX(SoundManager.Instance.gameOverClip, 0.5f);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.gameOverClip, 1f);
     }
 
 
